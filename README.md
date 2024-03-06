@@ -1,14 +1,18 @@
 # Simple Cloudflare DDNS Utility
 This is a very handy Python script that handles updating your DNS record when your IP address changes. There is no need to set up your subdomains beforehand. The utility only requires a domain you own (managed by Cloudflare) and an API token.
 ## Dependencies
-Python
+Python (venv recommended)
+- `pip install requests`
 ## Usage
 First create an API token with *DNS edit* permission on either a specific zone or all zones ([reference](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)).
 
 Then edit `config.json` to include the token and the ID of the zone you want to edit. Finally include the domains you wish to set up in the `domains` section of `config.json`, and execute `./run.sh`.
+## 依赖
+Python (建议使用 venv)
+- `pip install requests`
 
 ## 使用说明
-（需要Python）无需手动创建 DNS 记录，只需要你的域名和 API 令牌就可以自动管理你的动态 DNS。
+无需手动创建 DNS 记录，只需要你的域名和 API 令牌就可以自动管理你的动态 DNS。
 
 首先为你的 Cloudflare 账户设置一个 API 令牌，并赋予它 DNS 编辑权限。
 
